@@ -87,9 +87,9 @@
                     <p>You can to have successfully created your adventure</p>
                 </div>
                 <div class="links">
-                    <a href="https://laravel.com/docs">- New Adventure -</a>
+                    <a href="{{ url('/adventure/create') }}">- New Adventure -</a>
                     <a href="{{ url('/about') }}">- About -</a>
-                    <a href="https://laravel-news.com">- Contact -</a>
+                    <a href="{{ url('/adventure/') }}">- Index -</a>
                 </div>
             </div>
         </div>

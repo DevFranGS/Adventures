@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Adventure;
+
+class AdventureController extends Controller
+{
+    //
+    public function index(){
+        $adventure = Adventure::all();
+        return view('adventures', [
+            'adventures' => $adventure
+        ]);
+    }
+
+    public function show($id){
+        $adventure = Adventure::find($id);
+        return view('adventure.profile', [
+            'adventure' => $adventure
+        ]);
+    }
+
+    public function create(){
+        $adventure = new Adventure([
+                'nombre_articulo' => 'Este es el título',
+                'descripcion_articulo' => 'Esta es la descripción'
+            ]);
+        $adventure->save();
+        return $this.view($adventure->id);
+    }
+
+}

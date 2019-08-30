@@ -1,0 +1,22 @@
+extends('layouts.layout')
+    <div class="container">
+        <form class="form-horizontal" method="POST" action="{{ route('adventure.update') }}">
+            @foreach ($errors->all() as $error)
+                <p class="alert alert-danger">{{ $error}}</p><br>
+            @endforeach
+            {!! csrf_field() !!}
+            <fieldset>
+                <div class="form-group">
+                    <label for="name" class="col-lg-2 control-label">Título</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" value="{{ old('name')}}" id="name" placeholder="name" name="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                    <button class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>

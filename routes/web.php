@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::resource('adventure', 'AdventureController')->only([
+    'index', 'create', 'store', 'edit', 'update', 'destroy', 'show'
+]);
+
+Route::get('adventure/{id}', 'AdventureController@show');
