@@ -41,12 +41,12 @@
                </tr>
                @endforeach
                @else
-               <tr>
+                <tr>
                 <td colspan="8">There is no register option</td>
               </tr>
               @endif
             </tbody>
-            <!-- this is a comment -->
+            <!-- this is a comment  but what is this comment-->-->
           </table>
         </div>
       </div>
