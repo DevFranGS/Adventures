@@ -20,6 +20,8 @@ class AdventureController extends Controller
         //     'adventures' => $adventures
         // ]);
 
+        //Paginacion de adventure -- Comentario de Javier, prueba de GIT
+
         $adventures= Adventure::orderBy('id', 'DESC')->paginate(3);
         return view('adventure.index', compact('adventures'));
     }
