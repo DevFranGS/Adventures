@@ -46,7 +46,7 @@
               </tr>
               @endif
             </tbody>
-            <!-- this is a comment -->
+            
           </table>
         </div>
       </div>
