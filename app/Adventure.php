@@ -1,5 +1,5 @@
 <?php
-
+//DACDUQ COMMENT
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
