@@ -42,7 +42,7 @@
                @endforeach
                @else
                <tr>
-                <td colspan="8">There is no register option</td>
+                <td colspan="8">There is no register option dude!!!</td>
               </tr>
               @endif
             </tbody>
