@@ -84,7 +84,7 @@
                     About
                 </div>
                 <div>
-                    <p>Through your colaboration, this web application is the way to provide you with the best experience of game at this specific web application.
+                    <p>Through your colaboration, is the way to provide you with the best experience of game at this specific web application.
                 </p>
                 </div>
                 <div class="links">

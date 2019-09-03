@@ -84,7 +84,7 @@
                     Adventures
                 </div>
                 <div>
-                    <p>You can to have successfully created your adventure</p>
+                    <p>You can now successfully create your adventure</p>
                 </div>
                 <div class="links">
                     <a href="{{ url('/adventure/create') }}">- New Adventure -</a>
