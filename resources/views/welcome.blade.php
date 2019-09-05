@@ -89,7 +89,8 @@
                 <div class="links">
                     <a href="{{ url('/adventure/create') }}">- New Adventure -</a>
                     <a href="{{ url('/about') }}">- About -</a>
-                    <a href="{{ url('/adventure/') }}">- Index -</a>
+                    <a href="{{ url('/adventure/') }}">- Adventures -</a>
+                    <a href="{{ url('/dictionary/') }}">- Dictionary -</a>
                 </div>
             </div>
         </div>

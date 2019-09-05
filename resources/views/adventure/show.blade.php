@@ -10,7 +10,7 @@
       @endif
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="pull-left"><h3>Adventures</h3></div>
+          <div class="pull-left"><h3>Adventure</h3></div>
           <div class="pull-right">
             <div class="btn-group">
               <a href="{{ route('adventure.create') }}" class="btn btn-info" >New Milestrone</a>

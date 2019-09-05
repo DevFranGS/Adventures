@@ -12,6 +12,15 @@ class Adventure extends Model
      *
      * @var string
      */
+
+    public static function duplicate($num)
+    {
+        # code...
+        return $num + $num;
+    }
+
     protected $table = 'adventures';
     protected $fillable = ['name'];
+
+
 }

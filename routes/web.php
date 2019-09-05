@@ -27,4 +27,11 @@ Route::resource('adventure', 'AdventureController')->only([
     'index', 'create', 'store', 'edit', 'update', 'destroy', 'show'
 ]);
 
-Route::get('adventure/{id}', 'AdventureController@show');
+Route::get('adventure/{id}', 'AdventureController@show')
+    ->where('id', '[0-9]+');
+
+Route::resource('dictionary', 'DictionaryController')->only([
+    'index', 'create', 'store', 'edit', 'update', 'destroy', 'show'
+]);
+
+Route::match(['get', 'post', 'patch'],'translate', 'DictionaryController@translate')->name('dictionary');
