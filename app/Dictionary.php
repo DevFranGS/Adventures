@@ -18,7 +18,7 @@ class Dictionary extends Model
         $trans = Dictionary::where('term','=', $term)->first();
         if ($trans){
             $trans = Dictionary::where([
-                ['translate_id', '=', $trans->id],
+                ['translate_id', '=', $trans->translate_id],
                 ['language', '=', $lan],
             ])->first();
             return $trans->term;

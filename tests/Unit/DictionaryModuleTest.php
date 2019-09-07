@@ -18,5 +18,6 @@ class DictionaryModuleTest extends TestCase
         $this->assertEquals(Dictionary::translate('hola','en_UK'),'Hello');
         $this->assertEquals(Dictionary::translate('holas','en_UK'),'holas');
         $this->assertEquals(Dictionary::translate('',''),'');
+        $this->assertEquals(Dictionary::translate('ciao','en_UK'),'Hello');
     }
 }

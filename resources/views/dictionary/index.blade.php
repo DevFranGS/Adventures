@@ -51,8 +51,14 @@
               </tr>
               @endif
             </tbody>
-
           </table>
+          <table>
+             <tbody>
+              <tr>
+                <a href="{{ url('/') }}" class="btn btn-info btn-block" >Home</a>
+              </tr>
+             </tbody>
+            </table>
         </div>
       </div>
       {{ $terms->links() }}

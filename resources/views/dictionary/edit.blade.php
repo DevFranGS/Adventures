@@ -50,7 +50,7 @@
 							</div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <input type="submit"  value="Update" class="btn btn-success btn-block">
-                                <a href="{{ route('dictionary.index') }}" class="btn btn-info btn-block" >Back</a>
+                                <a href="{{ route('dictionary.index') }}" class="btn btn-info btn-block" >Index</a>
                             </div>
 							</div>
 						</form>

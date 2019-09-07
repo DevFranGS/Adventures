@@ -36,6 +36,13 @@
               </tr>
              </tbody>
             </table>
+            <table>
+             <tbody>
+              <tr>
+                <a href="{{ route('dictionary.index') }}" class="btn btn-info btn-block" >Index</a>
+              </tr>
+             </tbody>
+            </table>
           </div>
         </div>
       </div>

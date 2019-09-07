@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <label for="id" class="col-lg-2 control-label">ID</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" value="{{ old('id')}}" id="id" placeholder="id" name="id">
+                        <input type="text" class="form-control" value="{{ old('id')}}" id="id" placeholder="id" name="id" disabled>
                     </div>
                 </div>
                 <div class="form-group">
@@ -38,6 +38,7 @@
                     <div class="col-lg-10 col-lg-offset-2">
                     <button class="btn btn-default">Cancel</button>
                     <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="{{ route('dictionary.index') }}" class="btn btn-info btn-block" >Index</a>
                 </div>
             </fieldset>
         </form>

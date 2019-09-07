@@ -43,14 +43,19 @@ class DictionaryController extends Controller
     public function store(Request $request)
     {
         //
-        $term = new Dictionary([
-            'term' => $request->term,
-            'language' => $request->language,
-            'translate_id' => $request->translate_id,
+        if ($request->term and $request->language and $request->translate_id){
+            $term = new Dictionary([
+                'term' => $request->term,
+                'language' => $request->language,
+                'translate_id' => $request->translate_id,
 
-        ]);
-        $term->save();
-        return redirect()->action('DictionaryController@show', [$term]);
+            ]);
+            $term->save();
+            return redirect()->action('DictionaryController@show', [$term]);
+        }else{
+            return redirect()->route('dictionary.index')->with('success','All fields must have content');
+        }
+
     }
 
     /**
@@ -62,9 +67,14 @@ class DictionaryController extends Controller
     public function show( $id)
     {
         $term = Dictionary::find($id);
-        return view('dictionary.show', [
-            'term' => $term
-        ]);
+        if ($term){
+            return view('dictionary.show', [
+                'term' => $term
+            ]);
+        }else{
+            return redirect()->route('dictionary.index')->with('success','Term not detected successfully');
+        }
+
     }
 
     /**
@@ -77,10 +87,13 @@ class DictionaryController extends Controller
     {
         //
         $term = Dictionary::find($id);
-        return view('dictionary.edit', [
-            'term' => $term,
-        ]);
-
+        if ($term){
+            return view('dictionary.edit', [
+                'term' => $term,
+            ]);
+        }else{
+            return redirect()->route('dictionary.index')->with('success','Term not detected successfully');
+        }
     }
 
     /**
@@ -95,12 +108,15 @@ class DictionaryController extends Controller
         //
 
         $term = Dictionary::find($id);
-        $term->term = $request->term;
-        $term->language = $request->language;
-        $term->translate_id = $request->translate_id;
-        $term->save();
-        return redirect()->action('DictionaryController@show', ['term' => $term]);
-    }
+        if ($term and $request->term and $request->language and $request->translate_id){
+            $term->term = $request->term;
+            $term->language = $request->language;
+            $term->translate_id = $request->translate_id;
+            $term->save();
+            return redirect()->action('DictionaryController@show', ['term' => $term]);
+        }else{
+            return redirect()->route('dictionary.index')->with('success','All fields must have content or term not detected successfully');
+        }    }
 
     /**
      * Remove the specified resource from storage.
