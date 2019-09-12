@@ -77,7 +77,7 @@ class DictionaryControllerTest extends TestCase
 
         $term = factory(Dictionary::class)->create();
         $num_terms = Dictionary::count();
-        $response =  (new DictionaryController)->store(new \Illuminate\Http\Request([
+        $response =  (new DictionaryController)->store(new \App\Http\Requests\CreateDictonaryRequest([
             'term' => $term->term,
             'language' => $term->language,
             'translate_id' => 1,

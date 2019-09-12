@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+//use App\Http\Requests;
+//use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Http\FormRequest;
 use App\Dictionary;
+use App\Http\Requests\CreateDictonaryRequest;
+use App\Http\Requests\EditDictonaryRequest;
+
 use Illuminate\Http\Request;
+
 
 
 class DictionaryController extends Controller
@@ -40,7 +47,7 @@ class DictionaryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateDictonaryRequest $request)
     {
         //
         if ($request->term and $request->language and $request->translate_id){
@@ -103,7 +110,7 @@ class DictionaryController extends Controller
      * @param  \App\Dictionary  $term
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditDictonaryRequest $request, $id)
     {
         //
 
